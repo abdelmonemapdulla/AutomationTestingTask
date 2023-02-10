@@ -30,6 +30,7 @@ public class AddToCartBookSteps {
     public void User_add_to_cart_the_second_item_in_the_results(){
         booksPage = new BooksPage(driver);
         booksPage.clickOnAddToCartSecondItem();
+        booksPage.clickOnCartLabel();
     }
     @And("User agrees to terms and conditions")
     public void User_agrees_to_terms_and_conditions(){

@@ -2,6 +2,7 @@ package stepdefs;
 
 import PageObjectModel.HomePage;
 import PageObjectModel.RegisterPage;
+import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -15,16 +16,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.io.IOException;
 
 public class RegisterSteps{
-    public static WebDriver driver;
+    public static WebDriver driver = Hooks.driver;
     HomePage homePage;
     RegisterPage registerPage;
-
-    @Before
-    public void setup(){
-        driver = new ChromeDriver();
-        driver.navigate().to("https://demo.nopcommerce.com/");
-        driver.manage().window().maximize();
-    }
 
     @Given("User clicks on register link from home page")
     public void user_clicks_on_register_link_from_home_page() {

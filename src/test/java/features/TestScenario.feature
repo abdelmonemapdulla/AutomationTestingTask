@@ -1,3 +1,4 @@
+@E2E
 Feature: Register a new account and Login with this account and add book to cart and checkout
   Scenario: Register a new account and Login with this account and add book to cart and checkout
     Given User clicks on register link from home page

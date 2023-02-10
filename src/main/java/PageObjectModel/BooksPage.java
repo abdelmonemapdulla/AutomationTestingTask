@@ -19,9 +19,8 @@ public class BooksPage {
         Select PriceLowToHigh = new Select(driver.findElement(SortByDropDown()));
         PriceLowToHigh.selectByVisibleText("Price: Low to High");}
 
-    public void clickOnAddToCartSecondItem(){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(AddToCartSecondItem()));
+    public void clickOnAddToCartSecondItem() throws InterruptedException {
+        Thread.sleep(5000);
         driver.findElement(AddToCartSecondItem()).click();}
     public void clickOnCartLabel(){driver.findElement(CartLabel()).click();}
 }

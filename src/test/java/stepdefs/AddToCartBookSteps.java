@@ -27,7 +27,7 @@ public class AddToCartBookSteps {
         booksPage.sortPriceLowToHigh();
     }
     @And("User add to cart the second item in the results")
-    public void User_add_to_cart_the_second_item_in_the_results(){
+    public void User_add_to_cart_the_second_item_in_the_results() throws InterruptedException {
         booksPage = new BooksPage(driver);
         booksPage.clickOnAddToCartSecondItem();
         booksPage.clickOnCartLabel();
